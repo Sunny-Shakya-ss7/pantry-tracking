@@ -3,8 +3,10 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { firestore } from "@/firebase";
 import {
+  Avatar,
   Box,
   Button,
+  Grid,
   Modal,
   Stack,
   TextField,
@@ -87,8 +89,8 @@ export default function Home() {
   return (
     <Box
       width="100vw"
-      height="100vh"
       display="flex"
+      marginTop={4}
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
@@ -133,7 +135,18 @@ export default function Home() {
         </Box>
       </Modal>
 
-      <Stack width="800px" spacing={2} direction="row" marginBottom={2}>
+      <Stack width="1000px" spacing={2} direction="row" marginBottom={2}>
+        <Button
+          sx={{ width: "50px" }}
+          variant="outlined"
+          onClick={() => handleOpen()}
+        >
+          <Avatar
+            alt="Remy Sharp"
+            src="https://cdn0.iconfinder.com/data/icons/cooking-61/64/Recipe_cooking_book_kitchen_menu_-512.png"
+          />
+        </Button>
+
         <TextField
           label="Search"
           variant="outlined"
@@ -150,63 +163,50 @@ export default function Home() {
         >
           Add New Item
         </Button>
+
+        <Button
+          sx={{ width: "50px" }}
+          variant="outlined"
+          onClick={() => handleOpen()}
+        >
+          <Avatar
+            alt="Remy Sharp"
+            src="https://icon-library.com/images/photography-icon-png/photography-icon-png-7.jpg"
+          />
+        </Button>
       </Stack>
 
-      <Box border="1px solid #333">
-        <Box
-          width="800px"
-          height="100px"
-          border="#ADD8E6"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Typography variant="h2" color="#333">
-            Inventory Items
-          </Typography>
-        </Box>
+      <Grid width="800px" container spacing={2}>
+        {filteredInventory.map(({ name, quantity }) => (
+          <Grid
+            key={name}
+            item
+            xs={6}
+            md={3}
+            m={4}
+            p={1}
+            sx={{ border: "1px solid black", borderRadius: "10px" }}
+          >
+            <Stack direction="column" spacing={2}>
+              <Typography variant="h6" textAlign="center" color="#333">
+                <b>{name.charAt(0).toUpperCase() + name.slice(1)}</b>
+              </Typography>
 
-        <Stack width="800px" height="300px" spacing={2} overflow="auto">
-          {filteredInventory.length > 0 ? (
-            filteredInventory.map(({ name, quantity }) => (
-              <Box
-                key={name}
-                width="100%"
-                minHeight="150px"
-                display="flex"
-                alignItems="center"
-                justifyContent="space-between"
-                bgcolor="#f0f0f0"
-                padding={5}
-              >
-                <Typography variant="h3" textAlign="center" color="#333">
-                  {name.charAt(0).toUpperCase() + name.slice(1)}
-                </Typography>
-                <Typography variant="h3" textAlign="center" color="#333">
+              <Stack direction="row" spacing={2}>
+                <Button variant="contained" onClick={() => addItem(name)}>
+                  <Typography textAlign="center">+</Typography>
+                </Button>
+                <Typography variant="h6" textAlign="center" color="#333">
                   {quantity}
                 </Typography>
-                <Stack direction="row" spacing={2}>
-                  <Button variant="contained" onClick={() => addItem(name)}>
-                    Add
-                  </Button>
-                  <Button variant="contained" onClick={() => removeItem(name)}>
-                    Remove
-                  </Button>
-                </Stack>
-              </Box>
-            ))
-          ) : (
-            <Typography
-              variant="h4"
-              paddingTop={10}
-              display="flex"
-              justifyContent="center"
-            >
-              No items found
-            </Typography>
-          )}
-        </Stack>
-      </Box>
+                <Button variant="contained" onClick={() => removeItem(name)}>
+                  <Typography textAlign="center">-</Typography>
+                </Button>
+              </Stack>
+            </Stack>
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 }
