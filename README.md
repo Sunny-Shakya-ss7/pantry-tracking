@@ -1,18 +1,22 @@
+## Introduction
 
+## Features
 
-Set up a Next.js project with Material UI components
+- Set up a Next.js project with Material UI components
 
-Implement a Firebase backend for data storage
+- Implement a Firebase backend for data storage
 
-Create a form to add, delete, and update pantry items
+- A form to add, delete, and update pantry items
 
-Add a search or filter functionality to easily find items
+- A search or filter functionality to easily find items
 
-Create a presentable frontend design to display all pantry items
+- A presentable frontend design to display all pantry items
 
-Deploy to Vercel and use CI/CD
+- Deployed to Vercel
 
-Bonus: Take images with mobile or browser camera and upload to Firebase
+## Future Plans
+
+# Bonus: Take images with mobile or browser camera and upload to Firebase
 
 Bonus: Use GPT Vision API or other LLMs to classify images and then update to Firebase
 
