@@ -18,17 +18,17 @@ Welcome to PantryPal, your ultimate pantry management solution! PantryPal is des
 
 # Future Plans
 
-[ ] Take images with mobile or browser camera and upload to Firebase
+- [ ] Take images with mobile or browser camera and upload to Firebase
 
-[ ] Use GPT Vision API or other LLMs to classify images and then update to Firebase
+- [ ] Use GPT Vision API or other LLMs to classify images and then update to Firebase
 
-[ ] Use GCP Vertex AI and AutoML to classify 4-5 images of items near you and update Firebase
+- [ ] Use GCP Vertex AI and AutoML to classify 4-5 images of items near you and update Firebase
 
-[ ] Add a recipe suggestion feature based on pantry contents using the OpenAI API or OpenRouter API
+- [ ] Add a recipe suggestion feature based on pantry contents using the OpenAI API or OpenRouter API
 
-[ ] Shopping list recommendation for gym-goers as per their goals
+- [ ] Shopping list recommendation for gym-goers as per their goals
 
-[ ] Expiry date alerts and utilization priority to these items for recipe suggestion
+- [ ] Expiry date alerts and utilization priority to these items for recipe suggestion
 
 
 
