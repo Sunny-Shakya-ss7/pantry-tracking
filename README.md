@@ -1,6 +1,8 @@
-## Introduction
+# Introduction
 
-## Features
+Welcome to PantryPal, your ultimate pantry management solution! PantryPal is designed to simplify the way you manage your kitchen inventory, helping you keep track of the items you have, what you need, and when you need them. With PantryPal, you can easily log your groceries, set reminders for expiration dates, and generate shopping lists based on your preferences and dietary needs. Whether you’re a busy professional, a parent, or anyone looking to streamline their kitchen routine, PantryPal ensures that you always have the ingredients you need at your fingertips, reducing waste and making meal planning a breeze. Embrace a more organized and efficient kitchen experience with PantryPal!
+
+# Features
 
 - Set up a Next.js project with Material UI components
 
@@ -14,15 +16,19 @@
 
 - Deployed to Vercel
 
-## Future Plans
+# Future Plans
 
-# Bonus: Take images with mobile or browser camera and upload to Firebase
+[ ] Take images with mobile or browser camera and upload to Firebase
 
-Bonus: Use GPT Vision API or other LLMs to classify images and then update to Firebase
+[ ] Use GPT Vision API or other LLMs to classify images and then update to Firebase
 
-Bonus: Use GCP Vertex AI and AutoML to classify 4-5 images of items near you and update Firebase
+[ ] Use GCP Vertex AI and AutoML to classify 4-5 images of items near you and update Firebase
 
-Bonus: Add a recipe suggestion feature based on pantry contents using the OpenAI API or OpenRouter API
+[ ] Add a recipe suggestion feature based on pantry contents using the OpenAI API or OpenRouter API
+
+[ ] Shopping list recommendation for gym-goers as per their goals
+
+[ ] Expiry date alerts and utilization priority to these items for recipe suggestion
 
 
 
