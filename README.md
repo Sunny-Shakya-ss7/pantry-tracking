@@ -2,6 +2,8 @@
 
 Welcome to PantryPal, your ultimate pantry management solution! PantryPal is designed to simplify the way you manage your kitchen inventory, helping you keep track of the items you have, what you need, and when you need them. With PantryPal, you can easily log your groceries, set reminders for expiration dates, and generate shopping lists based on your preferences and dietary needs. Whether you’re a busy professional, a parent, or anyone looking to streamline their kitchen routine, PantryPal ensures that you always have the ingredients you need at your fingertips, reducing waste and making meal planning a breeze. Embrace a more organized and efficient kitchen experience with PantryPal!
 
+## Demo: https://youtu.be/DT7Ftfs6Fpc
+
 # Features
 
 - Set up a Next.js project with Material UI components
